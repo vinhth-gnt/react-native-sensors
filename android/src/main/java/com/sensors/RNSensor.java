@@ -93,11 +93,6 @@ public class RNSensor extends ReactContextBaseJavaModule implements SensorEventL
   }
 
   @Override
-  public boolean canOverrideExistingModule() {
-    return true;
-  }
-
-  @Override
   public void onSensorChanged(SensorEvent sensorEvent) {
     int currentType = sensorEvent.sensor.getType();
     if(currentType != this.sensorType) { // not for the current Sensor
